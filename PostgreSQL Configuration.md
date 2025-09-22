@@ -193,7 +193,7 @@ docker exec postgres-config df -h
 <img width="491" height="225" alt="1 3" src="https://github.com/user-attachments/assets/16cf9848-3725-4f80-ba5b-96db9028ac95" />
 
 
-```
+
 #### 1.2 เชื่อมต่อและตรวจสอบสถานะปัจจุบัน
 ```bash
 docker exec -it postgres-config psql -U postgres
