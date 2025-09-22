@@ -197,7 +197,6 @@ docker exec postgres-config df -h
 #### 1.2 เชื่อมต่อและตรวจสอบสถานะปัจจุบัน
 ```bash
 docker exec -it postgres-config psql -U postgres
-```![Uploading 1.1.png…]()
 
 
 ```sql
