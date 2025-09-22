@@ -209,9 +209,12 @@ SHOW hba_file;
 SHOW data_directory;
 
 ### บันทึกผลการทดลอง
-```
+<img width="664" height="418" alt="Screenshot 2025-09-22 230351" src="https://github.com/user-attachments/assets/c7b3b4be-5812-4d13-8c76-d0c7df7a7dac" />
+
 1. ตำแหน่งที่อยู่ของไฟล์ configuration อยู่ที่ตำแหน่งใด
+/var/lib/postgresql/data/postgresql.conf
 2. ตำแหน่งที่อยู่ของไฟล์ data อยู่ที่ตำแหน่งใด
+/var/lib/postgresql/data
 ```
 -- ตรวจสอบการตั้งค่าปัจจุบัน
 SELECT name, setting, unit, category, short_desc 
@@ -224,7 +227,8 @@ WHERE name IN (
 ### บันทึกผลการทดลอง
 ```
 บันทึกรูปผลของ configuration ทั้ง 6 ค่า 
-```
+<img width="945" height="421" alt="image" src="https://github.com/user-attachments/assets/9ef9c889-0e7d-4191-9d8b-f3dd71fe9be7" />
+
 
 ### Step 2: การปรับแต่งพารามิเตอร์แบบค่อยเป็นค่อยไป
 
@@ -238,8 +242,12 @@ WHERE name = 'shared_buffers';
 ### ผลการทดลอง
 ```
 1.รูปผลการรันคำสั่ง
+<img width="710" height="190" alt="image" src="https://github.com/user-attachments/assets/7e4b22fb-5188-486e-bfd3-3a72cf970ff5" />
+
 2. ค่า  shared_buffers มีการกำหนดค่าไว้เท่าไหร่ (ใช้ setting X unit)
-3. ค่า  pending_restart ในผลการทดลองมีค่าเป็นอย่างไร และมีความหมายอย่างไร
+   128 MB
+4. ค่า  pending_restart ในผลการทดลองมีค่าเป็นอย่างไร และมีความหมายอย่างไร
+   ไม่จำเป็นต้อง restart PostgreSQL เพื่อให้ค่าที่กำหนดมีผล
 ```
 -- คำนวณและตั้งค่าใหม่
 -- สำหรับระบบ 2GB: 512MB (25%)
